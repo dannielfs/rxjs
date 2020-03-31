@@ -1,4 +1,10 @@
-<ul>
-  <li><a href="/modulos/intervaltime">Interval Time</a></li>
-</ul>
-<router-outlet></router-outlet>
+<div class="modulos">
+  <ul class="menu">
+    <li *ngFor="let modulo of modulos" class="menu-item">
+      <a href="{{modulo.path}}" class="button">{{modulo.text}}</a>
+    </li>
+  </ul>
+  <div class="container-modulos">
+    <router-outlet></router-outlet>
+  </div>
+</div>

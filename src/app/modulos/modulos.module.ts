@@ -5,17 +5,23 @@ import { ModulosComponent } from './modulos.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterModule } from '@angular/router';
 import { ModulosRoutingModule } from './modulos.routing.module'
+import { FromEventComponent } from './from-event/from-event.component';
 
 
 @NgModule({
-  declarations: [IntervalTimeComponent, ModulosComponent],
+  declarations: [
+    IntervalTimeComponent,
+    ModulosComponent,
+    FromEventComponent
+  ],
   imports: [
     CommonModule,
     RouterModule,
     ModulosRoutingModule
   ],
   exports: [
-    IntervalTimeComponent
+    IntervalTimeComponent,
+    FromEventComponent
   ]
 })
 export class ModulosModule { }

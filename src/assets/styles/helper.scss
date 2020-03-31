@@ -1,0 +1,16 @@
+.button {
+  min-width: 5vw;
+  min-height: 2vw;
+  border-radius: 5px;
+  background-color: #64B5F6;
+  border: 1px solid #7986CB;
+  transition: all;
+  transition-duration: 0.5s;
+  padding: 5px;
+  &:hover {
+    transition: all ;
+    transition-duration: 0.5s;
+    background-color: #7986CB;
+    border: 1px solid #64B5F6;
+  }
+}

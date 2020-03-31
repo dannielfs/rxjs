@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { MODULOS } from './modulos';
 
 @Component({
   selector: 'app-modulos',
   templateUrl: './modulos.component.html',
-  styleUrls: ['./modulos.component.scss']
 })
 export class ModulosComponent implements OnInit {
+
+  public modulos: {};
 
   constructor() { }
 
   ngOnInit() {
+    this.modulos = MODULOS
   }
 
 }
