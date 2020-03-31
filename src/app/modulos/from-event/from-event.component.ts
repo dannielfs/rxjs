@@ -7,7 +7,7 @@ import { fromEvent, Subscription } from 'rxjs';
 })
 export class FromEventComponent implements OnInit, OnDestroy, AfterViewInit {
 
-  @ViewChild('container', {static: false}) public el: ElementRef;
+  @ViewChild('box', {static: false}) public box: ElementRef;
 
   public text: String;
 
@@ -26,10 +26,7 @@ export class FromEventComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private checkCoordenadas() {
-    //const mouseMove = fromEvent(this.el.nativeElement, 'mousemove');
-    const el = document.getElementById('box');
-    const mouseMove = fromEvent(el, 'mousemove');
-
+    const mouseMove = fromEvent(this.box.nativeElement, 'mousemove');
     this.subscriptions.push(
       mouseMove.subscribe((res: MouseEvent) => {
         this.text = `${res.clientX}:${res.clientY}`;
